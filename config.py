@@ -7,6 +7,7 @@ occurrences = 2
 
 meldHands = {
     #Name: ([card list], points, occurrences required for each card)
+    #Note: Points will be double counted, so reduce the value of higher combinations to account for double counting
     'Round Of Aces': (['AC','AD','AH','AS'], 10, 1),
     'Round Of Kings': (['KC','KD','KH','KS'], 8, 1),
     'Round Of Queens': (['QC','QD','QH','QS'], 6, 1),
@@ -23,14 +24,14 @@ meldHands = {
     'Double Marriage Hearts': (['KH', 'QH'], 2, 2),
     'Marriage Spades': (['KS', 'QS'], 2, 1),
     'Double Marriage Spades': (['KS', 'QS'], 2, 2),
-    'Run in Clubs': (['JC','QC','KC','10C','AC'], 15, 1),
-    'Run in Diamonds': (['JD','QD','KD','10D','AD'], 15, 1),
-    'Run in Hearts': (['JH','QH','KH','10H','AH'], 15, 1),
-    'Run in Spades': (['JS','QS','KS','10S','AS'], 15, 1),
-    'Double Run in Clubs': (['JC','QC','KC','10C','AC'], 135, 2),
-    'Double Run in Diamonds': (['JD','QD','KD','10D','AD'], 135, 2),
-    'Double Run in Hearts': (['JH','QH','KH','10H','AH'], 135, 2),
-    'Double Run in Spades': (['JS','QS','KS','10S','AS'], 135, 2),
+    'Run in Clubs': (['JC','QC','KC','10C','AC'], 13, 1), #subtract 2 for double counting marriage
+    'Run in Diamonds': (['JD','QD','KD','10D','AD'], 13, 1), #subtract 2 for double counting marriage
+    'Run in Hearts': (['JH','QH','KH','10H','AH'], 13, 1), #subtract 2 for double counting marriage
+    'Run in Spades': (['JS','QS','KS','10S','AS'], 13, 1), #subtract 2 for double counting marriage
+    'Double Run in Clubs': (['JC','QC','KC','10C','AC'], 133, 2), #subtract 2 for double counting marriage
+    'Double Run in Diamonds': (['JD','QD','KD','10D','AD'], 133, 2), #subtract 2 for double counting marriage
+    'Double Run in Hearts': (['JH','QH','KH','10H','AH'], 133, 2), #subtract 2 for double counting marriage
+    'Double Run in Spades': (['JS','QS','KS','10S','AS'], 133, 2), #subtract 2 for double counting marriage
     'Pinochle': (['QS','JD'], 4, 1),
     'Double Pinochle': (['QS','JD'], 26, 2)
 }
