@@ -2,7 +2,8 @@ import config
 
 def evaluate(hand):
     points = 0
-    for name, (cards, value, occurrences) in config.meldHands.items():
+    for name, meld_info in config.meldHands.items():
+        cards, value, occurrences = meld_info
         if all(hand.count(card) >= occurrences for card in cards):
-            points += value
+            points += value  # Ensure value is correctly accessed
     return points
